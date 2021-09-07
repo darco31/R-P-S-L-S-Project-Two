@@ -37,6 +37,10 @@ main {
     font-size: 2.5rem;
 }
 
+h2 {
+    font-family: var(--second-font-style);
+}
+
 .game-area {
     background-color: transparent;
     display: flex;
@@ -179,4 +183,8 @@ h2 {
     height: 3rem;
     background-color: transparent;
     width: 100%;
+}
+
+.secondary-font {
+    font-family: var(--second-font-style);
 }
