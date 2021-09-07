@@ -18,7 +18,7 @@ sans-serif; */
 :root {
     --main-font-style: 'Bangers', cursive;
     --second-font-style: 'Roboto', sans-serif;
-    --main-font-color:
+    --main-font-color: #171a21;
 }
 
 body {
@@ -32,7 +32,7 @@ main {
 
 .heading {
     font-family: var(--main-font-style);
-    color: #445361;
+    color: var(--main-font-color);
     text-align: center;
     font-size: 2.5rem;
 }
@@ -83,12 +83,12 @@ h2 {
 /* --------- Buttons */
 
 .btn {
-    width: 220px;
-    height: 60px;
-    font-family: "Raleway", sans-serif;
+    width: 20rem;
+    height: 4rem;
+    font-family: var(--second-font-style);
     text-transform: uppercase;
     letter-spacing: 1.2px;
-    color: white;
+    color: var(--main-font-color);
 }
 
 .btn:focus {
@@ -96,12 +96,12 @@ h2 {
 }
 
 .btn--big {
-    padding-top: 10px;
+    padding-top: 0.8rem;
     border-radius: 50%;
     background-color: white;
     border: 10px solid;
     width: 100px;
-    height: 100px;
+    height: 6.3rem;
     font-size: 3.2rem;
     margin: 0 30px;
     transition: all 0.5s;
@@ -134,6 +134,17 @@ h2 {
 .btn--orange:active,
 .btn--orange:hover {
     background-color: darkorange;
+    color: white;
+}
+
+.btn--darkViolet {
+    border-color: violet;
+    color: violet;
+}
+
+.btn--darkViolet:active,
+.btn--darkViolet:hover {
+    background-color: darkviolet;
     color: white;
 }
 
@@ -183,6 +194,8 @@ h2 {
     height: 3rem;
     background-color: transparent;
     width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 .secondary-font {
