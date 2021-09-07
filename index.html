@@ -17,31 +17,44 @@
         Rock - Paper - Scissors - Lizard - Spock
     </h1>
 
-    <div class="game-area">
-        <h2>Hit a icon and lets play</h2>
-        <div class="controls-area">
-            <button data-type="rock" class="btn btn--big btn--green">
-                <i class="far fa-hand-rock"></i>
-            </button>
-            <button data-type="paper" class="btn btn--big btn--blue">
-                <i class="far fa-hand-paper"></i>
-            </button>
-            <button data-type="scissors" class="btn btn--big btn--orange">
-                <i class="far fa-hand-scissors"></i>
-            </button>
-            <button data-type="lizard" class="btn btn--big btn--red">
-                <i class="far fa-hand-lizard"></i>
-            </button>
-            <button data-type="spock" class="btn btn--big btn--red">
-                <i class="far fa-hand-spock"></i>
-            </button>
+    <main>
+
+        <div class="game-area">
+            <h2>Hit a icon and lets play</h2>
+            <div class="controls-area">
+                <button data-type="rock" class="btn btn--big btn--green">
+                    <i class="far fa-hand-rock"></i>
+                </button>
+                <button data-type="paper" class="btn btn--big btn--blue">
+                    <i class="far fa-hand-paper"></i>
+                </button>
+                <button data-type="scissors" class="btn btn--big btn--orange">
+                    <i class="far fa-hand-scissors"></i>
+                </button>
+                <button data-type="lizard" class="btn btn--big btn--red">
+                    <i class="far fa-hand-lizard"></i>
+                </button>
+                <button data-type="spock" class="btn btn--big btn--red">
+                    <i class="far fa-hand-spock"></i>
+                </button>
+            </div>
+
+            <div class="score-area">
+                <p class="scores">Player Score: <span id="score">0</span></p>
+                <p class="scores">Computer Score: <span id="incorrect">0</span></p>
+            </div>
+    </main>
+
+    <footer id="footer">
+
+        <div class="footer--area">
+            <p class="footer--text">
+                Inspired by The Big Bang Theory and The Code Institute
+            </p>
         </div>
 
-        <div class="score-area">
-            <p class="scores">Player Score<span id="score">0</span></p>
-            <p class="scores">Computer Score <span id="incorrect">0</span></p>
-        </div>
-        <script src="assets/js/script.js"></script>
+    </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

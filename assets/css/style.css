@@ -1,4 +1,9 @@
 /* --------- Global style */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
 body {
     background: url('../images/1125.jpg');
@@ -8,6 +13,9 @@ body {
 }
 
 /* --------- Heading */
+main {
+    position: relative;
+}
 
 .heading {
     text-align: center;
@@ -16,11 +24,11 @@ body {
 
 .game-area {
     background-color: transparent;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    padding: 1%;
+    /* padding: 1%; */
 }
 
 .question-area {
@@ -167,4 +175,14 @@ body {
 
 .score-area {
     margin-top: 5rem;
+}
+
+/* Footer area design */
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    height: 3rem;
+    background-color: transparent;
+    width: 100%;
 }
