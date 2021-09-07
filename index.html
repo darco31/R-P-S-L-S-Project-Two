@@ -13,12 +13,12 @@
 
 <body>
     <h1 class="heading">
-        Lets Play!!!!
+        Lets Play!!!!<br>
         Rock - Paper - Scissors - Lizard - Spock
-
     </h1>
 
     <div class="game-area">
+        <h2>Hit a icon and lets play</h2>
         <div class="controls-area">
             <button data-type="rock" class="btn btn--big btn--green">
                 <i class="far fa-hand-rock"></i>
@@ -37,24 +37,11 @@
             </button>
         </div>
 
-        <div class="question-area">
-            <span id="operand1">0</span>
-            <span id="operator">x</span>
-            <span id="operand2">0</span>
-            <span>=</span>
-
-            <p class="answer-message">Enter Answer:</p>
-            <input type="number" id="answer-box">
+        <div class="score-area">
+            <p class="scores">Player Score<span id="score">0</span></p>
+            <p class="scores">Computer Score <span id="incorrect">0</span></p>
         </div>
-
-        <button data-type="submit" class="btn btn--gray">Submit Answer</button>
-    </div>
-
-    <div class="score-area">
-        <p class="scores">Correct Answers <span id="score">0</span></p>
-        <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
-    </div>
-    <script src="assets/js/script.js"></script>
+        <script src="assets/js/script.js"></script>
 </body>
 
 </html>
