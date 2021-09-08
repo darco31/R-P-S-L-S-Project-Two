@@ -35,3 +35,7 @@ function computerNumber() {
 }
 
 // if statements to decide the winner of each game?
+
+function winGame() {
+
+}
