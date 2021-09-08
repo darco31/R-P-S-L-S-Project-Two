@@ -10,6 +10,10 @@ document.querySelector('.close').addEventListener("click", function() {
 
 // Generate some random numbers for the computer to receive its pick?
 
+/**
+ * This returns random number between 1 and 5 that
+ * are assigned to the computer for its picks in the game
+ */
 function computerNumber() {
 
     let pcPick = Math.ceil(Math.random() * 5);
