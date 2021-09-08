@@ -100,9 +100,9 @@ h2 {
     border-radius: 50%;
     background-color: white;
     border: 10px solid;
-    width: 100px;
-    height: 6.3rem;
-    font-size: 3.2rem;
+    width: 10rem;
+    height: 10rem;
+    font-size: 6rem;
     margin: 0 30px;
     transition: all 0.5s;
 }
