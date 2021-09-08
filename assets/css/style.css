@@ -35,6 +35,7 @@ main {
     color: var(--main-font-color);
     text-align: center;
     font-size: 2.5rem;
+    margin: 2rem
 }
 
 h2 {
@@ -45,6 +46,7 @@ h2 {
     background-color: transparent;
     display: flex;
     flex-direction: column;
+    margin-top: 3rem;
 }
 
 .score-area {
@@ -58,6 +60,10 @@ h2 {
 h2 {
     display: flex;
     justify-content: center;
+}
+
+.controls-area {
+    margin-top: 5rem;
 }
 
 #score {
@@ -198,6 +204,6 @@ h2 {
     font-size: 1.5rem;
 }
 
-.secondary-font {
+/* .secondary-font {
     font-family: var(--second-font-style);
-}
+} */
