@@ -273,3 +273,43 @@ h2 {
 .close:hover {
     color: #666;
 }
+
+
+/* Media queries */
+
+@media screen and (max-width: 400px) {
+    .heading {
+        font-family: var(--main-font-style);
+        color: var(--main-font-color);
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 2rem
+    }
+
+    h2 {
+        font-family: var(--second-font-style);
+    }
+
+    .btn--big {
+        margin-top: 1rem;
+        padding-top: 0.8rem;
+        border-radius: 50%;
+        background-color: white;
+        border: 2px solid;
+        width: 4rem;
+        height: 4rem;
+        font-size: 2rem;
+        margin: 0 30px;
+        /* transition: all 0.8s; */
+        cursor: pointer;
+    }
+
+    .controls-area,
+    .score-area,
+    h2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
