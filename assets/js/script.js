@@ -8,34 +8,57 @@ document.querySelector('.close').addEventListener("click", function() {
 
 // Steps
 
-// Generate some random numbers for the computer to receive its pick?
+const computerChoiceDisplay = document.getElementById('computer-choice')
+const userChoiceDisplay = document.getElementById('user-choice')
+const resultDisplay = document.getElementById('result')
+const possibleChoices = document.querySelectorAll('button')
+let userChoice
+let computerChoice
+let result
 
-/**
- * This returns random number between 1 and 5 that
- * are assigned to the computer for its picks in the game
- */
-function computerNumber() {
+possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
+    userChoice = e.target.id
+    userChoiceDisplay.innerHTML = userChoice
+    generateComputerChoice()
+    getResult()
+}))
 
-    let pcPick = Math.ceil(Math.random() * 5);
+function generateComputerChoice() {
+    const randomNumber = Math.floor(Math.random() * 5) + 1 // or you can use possibleChoices.length
 
-    if (pcPick === 1) {
-        return 'rock';
-    } else if (pcPick === 2) {
-        return 'paper';
-    } else if (pcPick === 3) {
-        return 'scissors';
-    } else if (pcPick === 4) {
-        return 'lizard';
-    } else if (pcPick === 5) {
-        return 'spock'
-    } else {
-        return 'error'
+    if (randomNumber === 1) {
+        computerChoice = 'rock'
     }
-
+    if (randomNumber === 2) {
+        computerChoice = 'scissors'
+    }
+    if (randomNumber === 3) {
+        computerChoice = 'paper'
+    }
+    computerChoiceDisplay.innerHTML = computerChoice
 }
 
-// if statements to decide the winner of each game?
-
-function winGame() {
-
+function getResult() {
+    if (computerChoice === userChoice) {
+        result = 'its a draw!'
+    }
+    if (computerChoice === 'rock' && userChoice === "paper") {
+        result = 'you win!'
+    }
+    if (computerChoice === 'rock' && userChoice === "scissors") {
+        result = 'you lost!'
+    }
+    if (computerChoice === 'paper' && userChoice === "scissors") {
+        result = 'you win!'
+    }
+    if (computerChoice === 'paper' && userChoice === "rock") {
+        result = 'you lose!'
+    }
+    if (computerChoice === 'scissors' && userChoice === "rock") {
+        result = 'you win!'
+    }
+    if (computerChoice === 'scissors' && userChoice === "paper") {
+        result = 'you lose!'
+    }
+    resultDisplay.innerHTML = result
 }
