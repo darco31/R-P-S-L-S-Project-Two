@@ -1,9 +1,9 @@
-document.getElementById('how-to').addEventListener("click", function() {
-    document.querySelector('.bg-modal').style.display = "flex";
+document.getElementById('how--to').addEventListener("click", function() {
+    document.querySelector('.pop__out__modal').style.display = "flex";
 });
 
-document.querySelector('.close').addEventListener("click", function() {
-    document.querySelector('.bg-modal').style.display = "none";
+document.querySelector('.close--button').addEventListener("click", function() {
+    document.querySelector('.pop__out__modal').style.display = "none";
 });
 
 // Steps
