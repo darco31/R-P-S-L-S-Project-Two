@@ -7,9 +7,9 @@ document.querySelector('.close--button').addEventListener("click", function() {
 });
 
 
-//  The below will call the modal pop up to display the result an possibly the score
+//  The below will call the modal pop up to display the result an possibly the score and close it
 
-document.getElementById('choice').addEventListener("click", function() {
+document.getElementById('result__display').addEventListener("click", function() {
     document.querySelector('.result__modal').style.display = "flex";
 });
 
@@ -17,84 +17,67 @@ document.querySelector('.close--result').addEventListener("click", function() {
     document.querySelector('.result__modal').style.display = "none";
 });
 
-// Steps
 
-const computerChoiceDisplay = document.getElementById('computer-choice')
-const userChoiceDisplay = document.getElementById('user-choice')
-const resultDisplay = document.getElementById('result')
-const possibleChoices = document.querySelectorAll('button')
-let userChoice
-let computerChoice
-let result
 
-possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
-    userChoice = e.target.id
-    userChoiceDisplay.innerHTML = userChoice
-    generateComputerChoice()
-    getResult()
-}))
 
-// function generateComputerChoice() {
-
-//     let computerChoice = Math.ceil(Math.random() * 5);
-
-//     if (computerChoice === 1) {
-//         return "rock";
-//     } else if (computerChoice === 2) {
-//         return "paper";
-//     } else if (computerChoice === 3) {
-//         return "scissors";
-//     } else if (computerChoice === 4) {
-//         return "lizard";
-//     } else if (computerChoice === 5) {
-//         return "spock";
-//     } else {
-//         return "error";
-//     }
-//     computerChoiceDisplay.innerHTML = computerChoice;
-// }
-
-/**
- * This function generates a random between 0 and 5 and assigns an icon depending
- * on the number
- */
 function generateComputerChoice() {
-    const randomNumber = Math.ceil(Math.random() * 5) // or you can use possibleChoices.length
 
-    if (randomNumber === 1) {
-        computerChoice = 'rock'
+    let comChoice = Math.ceil(Math.random() * 5);
+
+    if (comChoice === 1) {
+        return "Rock";
+    } else if (comChoice === 2) {
+        return "Paper";
+    } else if (comChoice === 3) {
+        return "Scissors";
+    } else if (comChoice === 4) {
+        return "Lizard";
+    } else if (comChoice === 5) {
+        return "Spock";
+    } else {
+        return "error";
     }
-    if (randomNumber === 2) {
-        computerChoice = 'paper'
-    }
-    if (randomNumber === 3) {
-        computerChoice = 'scissors'
-    }
-    if (randomNumber === 3) {
-        computerChoice = 'lizard'
-    }
-    if (randomNumber === 3) {
-        computerChoice = 'spock'
-    }
-    computerChoiceDisplay.innerHTML = computerChoice
 }
 
 function getResult(userChoice) {
-    if (computerChoice === userChoice) {
-        result = 'its a draw!';
+    let result;
+    let comChoice = generateComputerChoice();
+    if (userChoice === comChoice) {
+        result = 'The game is a drawn!';
     } else {
-        if (userChoice === 'rock' && (computerChoice == 'paper' || computerChoice == 'lizard')) {
+        if (userChoice === 'rock' && (comChoice === 'paper' || comChoice === 'lizard')) {
             result = 'you win!'
-        } else if (userChoice === 'paper' && (computerChoice == 'rock' || computerChoice == 'spock')) {
+        } else if (userChoice === 'paper' && (comChoice == 'rock' || comChoice == 'spock')) {
             result = 'you win!'
-        } else if (userChoice === 'scissors' && (computerChoice == 'paper' || computerChoice == 'lizard')) {
+        } else if (userChoice === 'scissors' && (comChoice == 'paper' || comChoice == 'lizard')) {
             result = 'you win!'
-        } else if (userChoice === 'lizard' && (computerChoice == 'spock' || computerChoice == 'paper')) {
+        } else if (userChoice === 'lizard' && (comChoice == 'spock' || comChoice == 'paper')) {
             result = 'you win!'
-        } else if (userChoice === 'spock' && (computerChoice == 'scissors' || computerChoice == 'rock')) {
+        } else if (userChoice === 'spock' && (comChoice == 'scissors' || comChoice == 'rock')) {
             result = 'you win!'
+        } else {
+            result = 'You lose!'
         }
     }
 
-    resultDisplay.innerHTML = result
+    userChose(userChoice);
+    gameResult(result);
+    computerChose(comChoice);
+    return result;
+}
+
+
+function userChose(whatUserChose) {
+    const usersChoice = document.getElementById("user-choice");
+    usersChoice.innerHTML = whatUserChose;
+}
+
+function gameResult(gameResult) {
+    const gameEnded = document.getElementById("result");
+    gameEnded.innerHTML = gameResult;
+}
+
+function computerChose(computerChose) {
+    const computersChoice = document.getElementById("computer-choice");
+    computersChoice.innerHTML = computerChose;
 }

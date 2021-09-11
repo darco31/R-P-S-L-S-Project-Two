@@ -45,8 +45,9 @@
 
                 </div>
             </div>
-            <div class="controls--area">
-                <button id="choice" class="btn btn--big btn--green">
+
+            <div class="controls--area" id="result__display">
+                <button onclick="getResult('rock')" id="rock" class="btn btn--big btn--green">
                     <i class="far fa-hand-rock"></i>
                 </button>
                 <button id="paper" class="btn btn--big btn--blue">
@@ -62,15 +63,6 @@
                     <i class="far fa-hand-spock"></i>
                 </button>
             </div>
-
-            <h2 class="choices">Computer went : <span id="computer-choice"></span></h2>
-            <h2 class="choices">You went : <span id="user-choice"></span></h2>
-            <h2 class="choices">Result : <span id="result"></span></h2>
-            <!-- 
-            <div class="score--area">
-                <p class="scores">Player Score: <span id="score">0</span></p>
-                <p class="scores">Computer Score: <span id="incorrect">0</span></p>
-            </div> -->
     </main>
 
     <section>
