@@ -18,26 +18,30 @@ document.querySelector('.close--result').addEventListener("click", function() {
 });
 
 
-
+/**
+ * Generates a random number from 1 to 5 to assign to the computers choice
+ */
 
 function generateComputerChoice() {
 
     let comChoice = Math.ceil(Math.random() * 5);
 
     if (comChoice === 1) {
-        return "Rock";
+        return "rock";
     } else if (comChoice === 2) {
-        return "Paper";
+        return "paper";
     } else if (comChoice === 3) {
-        return "Scissors";
+        return "scissors";
     } else if (comChoice === 4) {
-        return "Lizard";
+        return "lizard";
     } else if (comChoice === 5) {
-        return "Spock";
+        return "spock";
     } else {
         return "error";
     }
 }
+
+
 
 function getResult(userChoice) {
     let result;
@@ -66,18 +70,17 @@ function getResult(userChoice) {
     return result;
 }
 
-
 function userChose(whatUserChose) {
     const usersChoice = document.getElementById("user-choice");
     usersChoice.innerHTML = whatUserChose;
 }
 
-function gameResult(gameResult) {
-    const gameEnded = document.getElementById("result");
-    gameEnded.innerHTML = gameResult;
-}
-
 function computerChose(computerChose) {
     const computersChoice = document.getElementById("computer-choice");
     computersChoice.innerHTML = computerChose;
+}
+
+function gameResult(gameResult) {
+    const gameEnded = document.getElementById("result");
+    gameEnded.innerHTML = gameResult;
 }
