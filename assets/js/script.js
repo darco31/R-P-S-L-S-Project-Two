@@ -49,7 +49,7 @@ function getResult(userChoice) {
     if (userChoice === comChoice) {
         result = 'The game is a drawn!';
     } else {
-        if (userChoice === 'rock' && (comChoice === 'paper' || comChoice === 'lizard')) {
+        if (userChoice === 'rock' && (comChoice === 'scissors' || comChoice === 'lizard')) {
             result = 'you win!'
         } else if (userChoice === 'paper' && (comChoice == 'rock' || comChoice == 'spock')) {
             result = 'you win!'
