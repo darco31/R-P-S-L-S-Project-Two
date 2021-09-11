@@ -6,6 +6,17 @@ document.querySelector('.close--button').addEventListener("click", function() {
     document.querySelector('.pop__out__modal').style.display = "none";
 });
 
+
+//  The below will call the modal pop up to display the result an possibly the score
+
+document.getElementById('choice').addEventListener("click", function() {
+    document.querySelector('.result__modal').style.display = "flex";
+});
+
+document.querySelector('.close--result').addEventListener("click", function() {
+    document.querySelector('.result__modal').style.display = "none";
+});
+
 // Steps
 
 const computerChoiceDisplay = document.getElementById('computer-choice')
