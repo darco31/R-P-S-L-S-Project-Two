@@ -55,20 +55,20 @@ function getResult(userPicked) {
 
 
     if (userPicked === computerPicked) {
-        result = 'The game is a drawn!';
+        result = 'The game is a draw!';
     } else {
-        if (userPicked === 'rock' && (computerPicked === 'scissors' || computerPicked === 'lizard')) {
-            result = 'you win!'
-        } else if (userPicked === 'paper' && (computerPicked == 'rock' || computerPicked == 'spock')) {
-            result = 'you win!'
-        } else if (userPicked === 'scissors' && (computerPicked == 'paper' || computerPicked == 'lizard')) {
-            result = 'you win!'
-        } else if (userPicked === 'lizard' && (computerPicked == 'spock' || computerPicked == 'paper')) {
-            result = 'you win!'
-        } else if (userPicked === 'spock' && (computerPicked == 'scissors' || computerPicked == 'rock')) {
-            result = 'you win!'
+        if (userPicked === ' rock' && (computerPicked === ' scissors' || computerPicked === ' lizard')) {
+            result = ' You win!'
+        } else if (userPicked === ' paper' && (computerPicked == ' rock' || computerPicked == ' spock')) {
+            result = ' You win!'
+        } else if (userPicked === ' scissors' && (computerPicked == ' paper' || computerPicked == ' lizard')) {
+            result = ' You win!'
+        } else if (userPicked === ' lizard' && (computerPicked == ' spock' || computerPicked == ' paper')) {
+            result = ' You win!'
+        } else if (userPicked === ' spock' && (computerPicked == ' scissors' || computerPicked == ' rock')) {
+            result = ' You win!'
         } else {
-            result = 'You lose!'
+            result = ' You lose!'
         }
     }
 
@@ -84,11 +84,11 @@ function userPick(userIcon) {
 }
 
 function computerPick(computerIcon) {
-    const computersChoice = document.getElementById("computer-pick");
-    computersChoice.innerHTML = computerIcon;
+    const comPick = document.getElementById("computer-pick");
+    comPick.innerHTML = computerIcon;
 }
 
 function gameResult(gameResult) {
-    const gameEnded = document.getElementById("result");
-    gameEnded.innerHTML = gameResult;
+    const gameOver = document.getElementById("result");
+    gameOver.innerHTML = gameResult;
 }
